@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Monem ❤️ Afiya</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Segoe UI;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+header{
+padding:70px 20px;
+}
+
+h1{
+font-size:55px;
+}
+
+.names{
+font-size:30px;
+letter-spacing:3px;
+margin-top:10px;
+}
+
+.slider{
+width:80%;
+max-width:600px;
+margin:auto;
+position:relative;
+}
+
+.slide{
+display:none;
+}
+
+.slide img{
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,0.4);
+}
+
+.note{
+max-width:700px;
+margin:auto;
+padding:40px;
+font-size:20px;
+line-height:1.8;
+}
+
+footer{
+padding:30px;
+font-size:20px;
+}
+
+.heart{
+position:fixed;
+bottom:-10px;
+color:red;
+font-size:20px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+100%{transform:translateY(-100vh)}
+}
+
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<header>
+
+<h1>Happy 2 Year Anniversary ❤️</h1>
+
+<div class="names">
+Monem ❤️ Afiya
+</div>
+
+<p>Our Love Story Continues...</p>
+
+</header>
+
+
+<div class="slider">
+
+<div class="slide">
+<img src="photo1.jpg">
+</div>
+
+<div class="slide">
+<img src="photo2.jpg">
+</div>
+
+<div class="slide">
+<img src="photo3.jpg">
+</div>
+
+</div>
+
+
+<div class="note">
+
+<p>
+Dear Afiya,
+</p>
+
+<p>
+These two years with you have been the most beautiful chapter of my life.
+Every smile, every memory, and every moment with you means the world to me.
+</p>
+
+<p>
+You are not only my love, you are my peace, my happiness, and my forever.
+</p>
+
+<p>
+I promise to keep loving you more every single day.
+</p>
+
+<p>
+Forever yours,  
+Monem ❤️
+</p>
+
+</div>
+
+
+<footer>
+
+Forever Monem ❤️ Afiya ❤️
+
+</footer>
+
+
+<script>
+
+let slides=document.getElementsByClassName("slide");
+let index=0;
+
+function showSlides(){
+for(let i=0;i<slides.length;i++){
+slides[i].style.display="none";
+}
+
+index++;
+
+if(index>slides.length){
+index=1;
+}
+
+slides[index-1].style.display="block";
+
+setTimeout(showSlides,3000);
+}
+
+showSlides();
+
+
+function createHeart(){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(Math.random()*20+10)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+}
+
+setInterval(createHeart,500);
+
+</script>
+
+</body>
+</html>
